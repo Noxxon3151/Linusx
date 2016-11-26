@@ -108,6 +108,12 @@
   <ItemGroup>
     <None Include="Resources\prin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Solid.Repositorio\Solid.Repositorio.csproj">
+      <Project>{7775e05f-e4b6-4df3-8b9d-581f2b4f8f08}</Project>
+      <Name>Solid.Repositorio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

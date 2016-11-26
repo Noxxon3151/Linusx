@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackgroundImage = global::Linusx.Properties.Resources.solid;
-            this.ClientSize = new System.Drawing.Size(1600, 835);
+            this.ClientSize = new System.Drawing.Size(600, 835);
             this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;

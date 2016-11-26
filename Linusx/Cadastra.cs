@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Solid.Repositorio;
 
 namespace Linusx
 {
@@ -43,17 +44,8 @@ namespace Linusx
         {
             string Nome = txtNome.Text;
             string Senha = txtSenha.Text;
-
-            string CONFIG = "server =127.0.0.1;userid=root;database=sistema";
-            MySqlConnection Conexao = new MySqlConnection(CONFIG);
-            MySqlCommand Query = new MySqlCommand();
-            Query.Connection = Conexao;
-            Conexao.Open();
-            Query.CommandText = "INSERT INTO login(Nome, Senha) VALUES(@nome, @senha)";
-            Query.Parameters.AddWithValue("@nome", Nome);
-            Query.Parameters.AddWithValue("@senha", Senha);
-            Query.ExecuteNonQuery();
-            Conexao.Close();
+            var Cadastro = new CadastroUsuario();
+            Cadastro.Inserir(Nome, "", Senha);
             MessageBox.Show("Cadastro Efetuado Com Sucesso!");
             this.Close();
         }
